@@ -11,7 +11,7 @@ export class PostsComponent implements OnInit {
 	constructor(private  net: NetService) { }
 
 	ngOnInit() {
-		this.net.getPosts()
+		this.net.getCachedPosts()
 			.subscribe((data: any) => {
 				console.log(data);
 			}, (err) => {

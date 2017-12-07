@@ -10,7 +10,18 @@ export class AppComponent {
 	names: string[];
 	isSelected: boolean;
 	divWidth: string;
-	num: number;
+	
+	private _num: number;
+
+	get num(): number {
+		return this._num;
+	}
+
+	set num(value: number) {
+		this._num = value;
+
+		console.log('Num change to ' + value);
+	}
 
 	constructor() {
 		this.names = ['Mike', 'Nike', 'Alex', 'Yossi'];
