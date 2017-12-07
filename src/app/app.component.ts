@@ -10,7 +10,7 @@ export class AppComponent {
 	names: string[];
 	isSelected: boolean;
 	divWidth: string;
-	
+
 	private _num: number;
 
 	get num(): number {

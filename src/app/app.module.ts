@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { RouterModule } from "@angular/router";
 
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductComponent } from './product/product.component';
@@ -12,6 +13,7 @@ import { PeopleService } from "./people.service";
 
 import { PostsComponent } from './posts/posts.component';
 import { NetService} from "./net.service";
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -20,12 +22,44 @@ import { NetService} from "./net.service";
 		ProductsListComponent,
 		ProductComponent,
 		ComponentInteractionComponent,
-		PostsComponent
+		PostsComponent,
+		PostComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
-		HttpClientModule
+		HttpClientModule,
+		RouterModule.forRoot([
+			{
+				path: '',
+				component: ComponentInteractionComponent
+			},
+			{
+				path: 'posts/:id',
+				component: PostComponent
+			},
+			{
+				path: 'posts',
+				component: PostsComponent
+			},
+			{
+				path: 'products',
+				component: ProductsListComponent
+			},
+			{
+				path: 'product',
+				component: ProductComponent
+			},
+			{
+				path: 'interaction',
+				component: ComponentInteractionComponent
+			},
+			{
+				path: '**',
+				component: ComponentInteractionComponent
+			}
+
+		])
 	],
 	providers: [
 		PeopleService,
