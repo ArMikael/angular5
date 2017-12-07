@@ -1,0 +1,8 @@
+.selected {
+	color: purple;
+	background: gold;
+}
+
+ul {
+	list-style: none;
+}

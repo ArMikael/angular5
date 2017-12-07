@@ -1,0 +1,24 @@
+<h2>Products list</h2>
+
+<section>
+	<label for="productName"></label>
+	<input type="text" id="productName" [(ngModel)]="productName">
+
+	<label for="productPrice"></label>
+	<input type="number" id="productPrice" [(ngModel)]="productPrice">
+
+	<label for="productQuantity"></label>
+	<input type="number" id="productQuantity" [(ngModel)]="productQuantity">
+
+	<button class="add-btn" (click)="addProduct();">Add</button>
+</section>
+
+<ul class="products-list">
+	<li class="product-item" *ngFor="let product of productsList"
+		[class.stroked]="product.isBought">
+		<input type="checkbox" [(ngModel)]="product.isBought">
+
+		<span>{{ product.name }}</span> ( {{ product.quantity }} ) -
+		<span>${{ product.price }}</span>
+	</li>
+</ul>
