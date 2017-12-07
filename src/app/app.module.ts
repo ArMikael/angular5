@@ -56,7 +56,7 @@ import { PostComponent } from './post/post.component';
 			},
 			{
 				path: '**',
-				component: ComponentInteractionComponent
+				redirectTo: '/'
 			}
 
 		])
