@@ -18,7 +18,6 @@ export class ProductsListComponent implements OnInit {
 		this.productPrice = null;
 		this.productQuantity = 1;
 		this.isBought = false;
-
 	}
 
 	addProduct = function() {

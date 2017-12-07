@@ -5,6 +5,11 @@
 		Welcome to {{ title }}!
 	</h1>
 
+
+	<app-component-interaction [myNumber]="num" (numberSet)="setNumber();"></app-component-interaction>
+
+	<app-component-interaction [(myNumber)]="num"></app-component-interaction>
+
 	<app-products-list></app-products-list>
 
 

@@ -1,0 +1,18 @@
+<section>
+	<label for="productName"></label>
+	<input type="text" id="productName" [(ngModel)]="newProduct.name">
+
+	<label for="productPrice"></label>
+	<input type="number" id="productPrice" [(ngModel)]="newProduct.price">
+
+	<label for="productQuantity"></label>
+	<input type="number" id="productQuantity" [(ngModel)]="newProduct.quantity">
+
+	<button class="add-btn" (click)="addProduct();">Add</button>
+</section>
+
+<ul>
+	<li *ngFor="let product of products">
+		{{ product.name }} x {{ product.quantity }} = {{ product.price * product.quantity }}
+	</li>
+</ul>
