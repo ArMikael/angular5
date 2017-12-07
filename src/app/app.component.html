@@ -4,9 +4,9 @@
 	<h1>
 		Welcome to {{ title }}!
 	</h1>
+	<h2>{{ num }}</h2>
 
-
-	<app-component-interaction [myNumber]="num" (numberSet)="setNumber();"></app-component-interaction>
+	<!--<app-component-interaction [myNumber]="num" (numberSet)="setNumber();"></app-component-interaction>-->
 
 	<app-component-interaction [(myNumber)]="num"></app-component-interaction>
 

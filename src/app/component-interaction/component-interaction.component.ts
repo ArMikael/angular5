@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { PeopleService } from './../people.service';
 
 @Component({
 	selector: 'app-component-interaction',
@@ -11,10 +12,14 @@ export class ComponentInteractionComponent implements OnInit {
 	// @Output() numberSet: EventEmitter<number> = new EventEmitter<number>();
 	@Output() myNumberChange: EventEmitter<number> = new EventEmitter<number>();
 
-	constructor() { }
+	peopleList: string[];
+
+	constructor(private people: PeopleService) {
+		this.people = people;
+	}
 
 	ngOnInit() {
-
+		this.peopleList = this.people.getPeople();
 	}
 
 	setNumber() {

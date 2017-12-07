@@ -6,20 +6,23 @@ import {FormsModule} from "@angular/forms";
 import { ProductsListComponent } from './products-list/products-list.component';
 import { ProductComponent } from './product/product.component';
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
+import { PeopleService } from "./people.service";
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProductsListComponent,
-    ProductComponent,
-    ComponentInteractionComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		ProductsListComponent,
+		ProductComponent,
+		ComponentInteractionComponent
+	],
+	imports: [
+		BrowserModule,
+		FormsModule
+	],
+	providers: [
+		PeopleService
+	],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

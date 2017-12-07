@@ -5,3 +5,10 @@
 
 <input type="number" [(ngModel)]="myNumber">
 <button (click)="setNumber()">Set number</button>
+
+<h2>Services</h2>
+<ul class="people-list">
+	<li *ngFor="let person of peopleList">
+		{{ person }}
+	</li>
+</ul>
